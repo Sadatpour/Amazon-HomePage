@@ -1,0 +1,470 @@
+/* Css Reset  */
+html {
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  font-family: Lato;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #aaaaaa;
+}
+/* CSS Reset End  */
+/* ---------- Variable Css ---------- */
+:root {
+  --color-primary: #f33d00;
+  --color-secodary: #febd69;
+  --color-bg-nav: #131921;
+  --color-bg-mobile-header: #232f3e;
+  --color-bg-two: #37475a;
+  --color-bg-footer: #232f3e;
+  --body-bg: #e3e6e6;
+  --color-bg-btn: #f7ca00;
+  --color-white: #fff;
+  --color-link: #007185;
+  --color-black: #000;
+}
+.btn {
+  background-color: var(--color-bg-btn);
+  border: 0;
+  border-radius: 5px;
+  margin: 0.5rem 1rem;
+  height: 50px;
+  font-size: 1rem;
+}
+a {
+  margin: 0.5rem 1rem;
+  text-decoration: none;
+  color: var(--color-link);
+}
+/* Mobile Responsive Approch */
+/* ---------- Start of Header Css ---------- */
+
+body {
+  background-color: var(--body-bg);
+}
+.desktop-header,
+.header-subnav,
+.nav-bar {
+  display: none;
+}
+.mobile-header {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  padding: 2px 5px;
+  justify-items: start;
+  background-color: var(--color-bg-mobile-header);
+  height: 140px;
+  color: var(--color-white);
+}
+.mobile-header .mobile-navbar {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  gap: 3rem;
+  margin: 0px 0.5rem;
+}
+
+.mobile-header .mobile-navbar .mobile-menu i {
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+.mobile-header .mobile-navbar .mobile-logo img {
+  width: 80px;
+  height: 27px;
+  margin: 0.7rem 0rem 0rem -3rem;
+}
+.mobile-header .mobile-signin {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  margin: -25px;
+}
+.mobile-header .mobile-navbar .mobile-signin i.fa-user {
+  font-size: 1.2rem;
+}
+.mobile-header .mobile-navbar .mobile-cart img {
+  width: 40px;
+}
+.mobile-header .mobile-searchbar {
+  width: 95%;
+  margin: 0.5rem 1rem 0 0.5rem;
+}
+.mobile-header .mobile-searchbar form input {
+  width: 92%;
+  height: 40px;
+  border-radius: 6px;
+  position: relative;
+  border: 0;
+}
+
+.mobile-header .mobile-searchbar form input::placeholder {
+  font-size: 1rem;
+}
+.mobile-header .mobile-searchbar form button {
+  margin: -2px 0 0 -1.5rem;
+  width: 50px;
+  height: 45px;
+  border-radius: 6px;
+  background-color: var(--color-secodary);
+  border: 0;
+  position: absolute;
+}
+
+.mobile-header .mobile-searchbar form button i {
+  font-size: 2rem;
+}
+
+.mobile-header .mobile-categoryline {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  margin: 0 1rem;
+}
+.mobile-header .mobile-categoryline a {
+  text-decoration: none;
+  color: var(--color-white);
+  margin: 1rem 0.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.mobile-location {
+  height: 33px;
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  padding: 0.3rem 2.2rem;
+  background-color: var(--color-bg-two);
+}
+.mobile-location .fa-map-marker-alt {
+  color: #ffd43b;
+  font-size: 1.5rem;
+  margin: 0 1rem 0 0;
+}
+.mobile-location p {
+  margin: 0 1rem 0 0;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* grid-template-rows: repeat(10, 1fr); */
+  justify-items: stretch;
+}
+.main-content .amazon-slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 100%;
+  height: 444px;
+  background: url(/assets/img/amazon-mobile-slider.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #e3e6e6;
+}
+.main-content .amazon-slider .amazon-slider-ads {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+.main-content .amazon-slider .amazon-slider-ads .slider-ads-box {
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  margin: 0 0.5rem;
+  border: 0;
+  box-shadow: 0px 0px 14px -3px rgba(0, 0, 0, 0.26);
+  box-shadow: 0px 0px 14px -3px rgba(0, 0, 0, 0.26);
+  box-shadow: 0px 0px 14px -3px rgba(0, 0, 0, 0.26);
+}
+.main-content .amazon-slider .amazon-slider-ads .slider-ads-box img {
+  width: 150px;
+  height: auto;
+}
+.main-content .signin-alarm {
+  display: flex;
+  flex-direction: column;
+  height: 130px;
+  margin: 4rem 0 0 0;
+  background-color: #fff;
+  justify-content: center;
+  align-items: stretch;
+}
+.main-content .signin-alarm p {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0.5rem 1rem;
+}
+
+.main-content .products-box {
+  display: flex;
+  flex-direction: column;
+  height: 550px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  background-color: var(--color-white);
+  padding: 0.3rem;
+}
+.main-content .products-box .product-box {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.main-content .products-box .product-box .product-info img {
+  width: 200px;
+}
+.main-content .amazon-ads img {
+  width: 100%;
+  margin: 0.5rem 0;
+}
+.main-content .amazon-products-box .category-name {
+  margin: 0.5rem;
+}
+.above-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+  width: 100%;
+  height: 40px;
+  background-color: var(--color-bg-two);
+}
+.above-footer p,
+i {
+  color: #ccc;
+  font-weight: bold;
+}
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--color-bg-footer);
+  width: 100%;
+  height: 250px;
+}
+.footer .footer-widget {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem 0.5rem;
+}
+.footer .footer-widget a {
+  color: #ccc;
+}
+.below-footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  background-color: var(--color-black);
+  width: 100%;
+  height: 200px;
+  color: #ccc;
+  padding: 1rem 0;
+}
+.below-footer .below-footer-lang {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin: 1rem 0;
+  justify-content: center;
+}
+.below-footer .below-footer-lang i {
+  font-size: 0.7rem;
+}
+.below-footer .below-footer-lang img {
+  width: 30px;
+  height: 20px;
+}
+.below-footer .below-footer-signin {
+  text-align: center;
+}
+.below-footer .below-footer-privacy ul {
+  text-align: center;
+}
+.below-footer .below-footer-privacy ul li {
+  display: inline-block;
+  font-size: 0.7rem;
+  margin: 0 0.3rem 2rem 0;
+}
+.below-footer .below-footer-privacy ul li img {
+  width: 20px;
+}
+.below-footer p {
+  margin: 0 0 2rem 0;
+  font-size: 0.8rem;
+  text-align: center;
+}
+.designer-notice {
+  background-color: var(--color-bg-two);
+  padding: 1rem 0;
+  color: var(--color-white);
+  text-align: center;
+}
+.designer-notice p{
+  margin: 1rem 0;
+}
+
+/* ---------- End of Header Css ---------- */
+
+@media screen and (min-width: 767px) {
+  /* .mobile-header,
+  .mobile-location {
+    display: none;
+  } */
+  /* .desktop-header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+    background-color: #000000;
+  } */
+  /* .header-subnav {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 1rem;
+    height: 11vh;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+  } */
+
+  /* .desktop-header .header-subnav .logo img {
+    width: 100px;
+    height: auto;
+  } */
+
+  /* .desktop-header #nav-bar {
+    height: 7vh;
+    background-color: #79f976;
+  } */
+}
