@@ -1,3 +1,11 @@
 {
-  "livePreview.defaultPreviewPath": "/index.html"
+  "livePreview.defaultPreviewPath": "/index.html",
+  "cSpell.words": [
+    "categoryline",
+    "Livestreams",
+    "Sadatpour",
+    "searchbar",
+    "signin",
+    "subnav"
+  ]
 }

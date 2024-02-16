@@ -129,7 +129,7 @@ table {
 /* ---------- Variable Css ---------- */
 :root {
   --color-primary: #f33d00;
-  --color-secodary: #febd69;
+  --color-secondary: #febd69;
   --color-bg-nav: #131921;
   --color-bg-mobile-header: #232f3e;
   --color-bg-two: #37475a;
@@ -226,7 +226,7 @@ body {
   width: 50px;
   height: 45px;
   border-radius: 6px;
-  background-color: var(--color-secodary);
+  background-color: var(--color-secondary);
   border: 0;
   position: absolute;
 }
@@ -497,7 +497,7 @@ i {
     border: 0;
   }
   .desktop-header .search-box form button {
-    background-color: var(--color-secodary);
+    background-color: var(--color-secondary);
     padding: 0.84rem 1.5rem;
     margin-left: -0.4rem;
     border-radius: 0 5px 5px 0;
